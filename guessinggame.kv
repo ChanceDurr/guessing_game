@@ -1,0 +1,46 @@
+#:kivy 1.11.0
+
+<CustButton@Button>:
+    size: 50, 200
+    size_hint: .5, None
+
+<GridLayout>:
+    Label:
+        id: instructions
+        text: ''
+        text_size: self.size
+        valign: 'middle'
+        halign: 'center'
+        padding_x: 10
+
+    Label:
+        id: gameText
+        text: ''
+        text_size: self.size
+        valign: 'middle'
+        halign: 'center'
+        padding_x: 10
+
+    Label:
+        id: guessText
+        text: ''
+        text_size: self.size
+        valign: 'middle'
+        halign: 'center'
+        padding_x: 10
+
+    CustButton:
+        id: lower
+        text: 'Lower'
+        on_press: root.lower()
+
+    CustButton:
+        id: start
+        text: 'Start'
+        on_press: root.pressStart()
+
+    CustButton:
+        id: higher
+        text: 'Higher'
+        on_press: root.higher()
+    
